@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DESSERT GALLERY</title>
+<!--애니메이션-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<script src="https://kit.fontawesome.com/81e35a1647.js" crossorigin="anonymous"></script>
+<!-- 스크롤 시 fade up 애니메이션 -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">	
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<style>
+			body{
+			text-align: center;
+			margin-top: 130px;
+			margin-left: 20px;
+			margin-right: 20px;
+			font-family: arial, sans-serif;
+			/*배경에 그라데이션 적용 */
+			background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,0.00) 88.29%,rgba(255,7,7,0.73) 100%);
+			background-image: -moz-linear-gradient(270deg,rgba(255,255,255,0.00) 88.29%,rgba(255,7,7,0.73) 100%);
+			background-image: -o-linear-gradient(270deg,rgba(255,255,255,0.00) 88.29%,rgba(255,7,7,0.73) 100%);
+			background-image: linear-gradient(180deg,rgba(255,255,255,0.00) 88.29%,rgba(255,7,7,0.73) 100%);
+		}	
+		/* 로고, 제목, 닫는 아이콘이 포함된 메뉴부분*/
+			header{
+			position: fixed;
+			background-color: white;
+			top:0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			padding: 5px;
+			margin: 0 0 0 0;
+			list-style: none;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			box-shadow: 0 0 20px black;
+			z-index: 100;
+		}
+		header ul {
+			list-style: none;
+			margin: 0;
+			padding: 10px;
+		}
+		header li {
+			display: inline-block;
+			font-size: 1.8em;
+			font-family: arial;
+			padding: 0 25px;
+			
+		}
+		/* 페이지 닫는 아이콘*/
+		button{
+			outline: none;
+			content: 'x';
+			background-color: transparent;
+			border: none;
+			font-size: 1.3em;
+			font-family: arial, sans-serif;
+			line-height: 0;
+		}
+		button:hover{
+			opacity: 0.5;
+			color: red;
+		}
+		button:active{
+			opacity:1;
+		}
+		/*명화 담긴 테이블에 적용*/
+		td{
+			width: 50%;
+			padding: 0 20px;
+		}
+		td h1{font-size: 6em;
+			margin-bottom: -5px;
+			text-decoration: underline solid;
+		}
+		td h3{font-size: 2em;
+			font-style:  italic ;
+			text-align: right;
+			font-weight: normal;
+		}
+		td h2{font-size: 3.8em;
+			text-align: center;
+			text-decoration: solid underline;
+			margin-bottom: -10px;
+		}
+		td p{font-size: 1.3em;
+			text-align: center;
+		}
+
+		#lets{
+			font-size: 8.5em;
+			line-height: 3em;
+		}
+		#apples{
+			margin-top: 40px;
+			margin-bottom: 20em;
+			word-spacing: 2em;
+		}
+		section ul{
+			list-style: none;
+			border: dashed 1.5px;
+		}
+		.title{
+			font-size:4.5em;
+			margin-top: 2em;
+			color: #760103;
+		}
+		.detail{
+			border: 1.5px dashed;
+			margin: 0 50px;
+			font-family: "Noto sans kr";
+			font-size: 1.5em;
+		}
+		.detail2{
+			margin: -50px 50px 0 50px;
+			font-family: "Noto sans kr";
+			font-size:2em;
+		}
+		#number1{
+			background-color: rgba(255,230,230,0.80);
+			padding-top: 120px;
+			padding-right: 50px;
+			color: white;
+			font-size: 5em;
+			text-align: right;
+		}
+		#number2{
+			background-color: rgba(255,211,211,0.80);
+			padding-top: 120px;
+			padding-right: 50px;
+			color: white;
+			font-size: 5em;
+			text-align: right;
+		}
+		#number3{
+			background-color: rgba(255,195,195,0.80);
+			padding-top: 120px;
+			padding-right: 50px;
+			color: white;
+			font-size: 5em;
+			text-align: right;
+		}
+		#number4{
+			background-color:rgba(252,170,170,0.80);
+			padding-top: 120px;
+			padding-right: 50px;
+			color: white;
+			font-size: 5em;
+			text-align: right;
+		}
+		#apple{
+			margin-top: 180px;
+			margin-bottom: -20px;
+			width: 160px;
+		}
+		#enjoy{
+			font-size: 5em;
+			margin-bottom:150px;
+			letter-spacing: 0.05em;
+		}
+		footer {
+			position: absolute;
+			padding: 5px;
+			background-color: white;
+			
+		}
+		footer ul{
+			list-style: none;
+			background-color: white;
+			padding: 0;
+			
+		}
+		footer li{
+			display: inline-block;
+			padding: 0 20px;
+			font-size: 1.2em;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<ul>
+			<li style="float: left;"><a href="index.html"><img src="image/Asset 5.png" width="22" alt="logo"/></a></li>
+			<li>CUPCAKE</li>
+			<li style="float: right">
+			<button class="close" onClick="history.back()">x</button>
+			</li>
+		</ul>
+	</header>
+<section>
+	
+   <div data-aos="fade-up">
+ 	<!-- 명화와 명화에 대한 설명을 표에 적용하였다.-->
+		<table width="100%" border="0">
+		  <tbody>
+		    <tr>
+		      <td><img src="image/Pablo-Picasso-Untitled-18-1937.jpg" width="100%"></td>
+		      <td>
+				  <h1>Untitled, 1937</h1>
+				  <h3>-Oil on canvas</h3>
+				  <h2>Pablo Picasso</h2>
+				  <p>Spain | 1881 -1973</p>
+				  <br><br>
+			  </td>
+		    </tr>
+		  </tbody>
+		</table>
+    </div>
+  </section>
+
+  <section>
+  	<!-- 컵케이크 이미지에 바운스 애니메이션 적용, fade-up 적용 -->
+  	<!-- z-index는 이미지가 메뉴 위로 올라오는 것을 방지하기 위해 적용-->
+	<div class="animated infinite bounce delay-7s"  data-aos="fade-up">
+		<img src="image/cupcake.png" width="150" style="margin-top: 180px; z-index:10;">
+	</div>
+	<h1  data-aos="fade-up">Chocolate Cupcake</h1>
+	<h1 id="lets"  data-aos="fade-up">LET'S MAKE!</h1>
+	<div id="apples"  data-aos="fade-up">
+			<img src="image/Asset 5.png" width="3%;">
+			<img src="image/Asset 5.png" width="3%;">
+			<img src="image/Asset 5.png" width="3%;">
+			<img src="image/Asset 5.png" width="3%;">
+			<img src="image/Asset 5.png" width="3%;">
+	</div>
+
+	<!-- 재료 제목과 설명 부분-->
+	<h1 class="title"  data-aos="fade-up">INGREDIENTS</h1>
+	<div class="detail"  data-aos="fade-up">
+		<p>
+		버터 200g<br>설탕 160g<br>바닐라 에센스 1ts<br>소금 1/4ts<br>꿀 40g<br>달걀 4개<br>박력분 90g<br>코코아가루 20g<br>베이킹파우더 4g<br>다크초콜릿 120g
+		</p>	
+	</div>
+	<!--레시피 제목과 설명 부분 -->
+	<h1 class="title"  data-aos="fade-up">RECIPE</h1>
+	<div class="detail2"  data-aos="fade-up">
+		<h2 id="number1">1</h2>
+			<p>실온상태 버터에 설탕, 바닐라설탕, 소금을 2~3번에 나누어 넣으며 풀어준다.</p>
+		<h2 id="number2">2</h2>
+			<p>크림화한 반죽에 꿀과 달걀을 하나씩 넣고 풀어준다.</p>
+		<h2 id="number3">3</h2>
+			<p>체친 가루류를 넣고 칼로 자르듯이 섞어 주고, 중탕한 초콜릿을 넣고 섞어 준다.</p>
+		<h2 id="number4">4</h2>
+			<p>유산지를 깐 머핀틀에 반죽을 넣고 예열한 오븐에 굽는다.</p>
+	</div>
+
+	  	<img id="apple" src="image/18.png"  data-aos="fade-up">
+		<h1 id="enjoy"  data-aos="fade-up">LET'S ENJOY!</h1>
+  </section>
+  <footer>
+	  <ul>
+			<li>Recipe of 'Dessert in arts'</li>
+			<li>© Dessert Gallery</li>
+		</ul>
+	</footer>
+</body>
+<!-- 스크롤 애니메이션 -->
+	<script>
+  	AOS.init();
+	</script>
+</html>

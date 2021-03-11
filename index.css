@@ -1,0 +1,201 @@
+		/*index.html의 스타일 적용*/
+		body {
+			margin: auto;
+		text-align: center;
+			padding-top: 35px;
+		}
+		/*메뉴부*/
+		header {
+			z-index: 100;
+			font-family:arial;
+			position: fixed;
+			top:0;
+			left: 0;
+			right: 0;
+			background-color: white;
+			margin: 0 0 0 0;
+			font-size: 1.8em;
+		}
+		nav ul {
+			margin: 0;
+			padding: 10px;
+			list-style: none;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			box-shadow: 0 0 20px black;
+			transition: all 200ms linear;
+			-webkit-transition: all 200ms linear;
+			-moz-transition: all 200ms linear;
+			-ms-transition: all 200ms linear;
+			-o-transition: all 200ms linear;
+		}
+		nav li {
+			display: inline-block;
+			padding: 5px 50px;
+		}
+		nav ul:hover {
+			border-bottom-color: red;
+			box-shadow: 0 0 40px red;
+			transition: all 200ms linear;
+			-webkit-transition: all 200ms linear;
+			-moz-transition: all 200ms linear;
+			-ms-transition: all 200ms linear;
+			-o-transition: all 200ms linear;
+		}
+		nav a {color: black;
+			text-decoration: none;
+			border-bottom-style: solid;
+			border-bottom-color: transparent;
+			border-bottom-width: 0px;
+			transition: all 150ms linear;
+			-webkit-transition: all 150ms linear;
+			-moz-transition: all 150ms linear;
+			-ms-transition: all 150ms linear;
+			-o-transition: all 150ms linear;
+			}
+
+		nav a:hover {
+			color: red;
+			border-bottom-style: solid;
+			border-bottom-color: red;
+			border-bottom-width: 2px;
+			transition: all 150ms linear;
+			-webkit-transition: all 150ms linear;
+			-moz-transition: all 150ms linear;
+			-ms-transition: all 150ms linear;
+			-o-transition: all 150ms linear;
+		}
+		/*home*/
+		#home_title{
+			font-size: 7em;
+			font-family: arial;
+			line-height: 2em;
+			margin-bottom: 2.8em;
+		}
+		/*메뉴와 메인 이미지에 z-index를 적용해서 애니메이션 적용한 이미지가 메뉴 위로 떠오르는 현상을 방지하고자 함.*/
+		#apple{
+			margin-bottom: 4.4em;
+			z-index: 10;
+		}
+		/* 스크롤다운 화살표 아이콘 */
+		i {
+			margin-bottom: 2em;
+		}
+		/* about */
+		#apples{
+			word-spacing: 2em;
+			margin-bottom: 15em;
+		}
+		/* 배경 그라데이션 적용 */
+		.redbg{
+			background: rgb(255,0,0);
+			background: linear-gradient(180deg, rgba(255,0,0,0) 30%, rgba(255,0,0,0.8550770650056898) 92%, rgba(255,0,0,0) 100%);
+		}
+		
+		#about_detail {
+		font-family: 'Noto sans kr';
+		font-size: 2em;
+		padding-top: 0px;
+			font-weight: bold;
+		}
+		#about_title{
+			color: #D71A1D;
+			font-family: arial;
+			font-size: 4.5em; 
+			border-bottom: solid black 2px;
+			margin-bottom: -30px;
+		}
+		#about_dg{
+			font-family: arial;
+			border-bottom: solid 2px;
+			font-size: 3.5em;
+			
+		}
+		/* dessert*/
+		#d_title{
+			font-size: 12em;
+			text-decoration: line-through red;			
+		}
+		#d_title:hover{
+			text-decoration: none;
+		}
+		#des_img{
+			margin:150px 0;
+		}
+		/*디저트 이미지에 마우스 올리면 적용되는 효과*/
+		#des_img img:hover{
+			opacity:0.7;
+			transform: scale(1.2);
+		}
+		#cup{
+			padding-right: 90px;
+		}
+		#gal{
+			padding-left: 90px;
+		}
+		/*contact*/
+		#contact_title{
+			font-family: arial;
+			font-size: 4.5em; 
+			border-bottom: solid black 2px;
+			margin-bottom: -30px;
+		}
+		#contact{
+			font-family: arial;
+		}
+		#apples3{
+			display: inline-block;
+			float: center;
+			margin-top: 70px;
+		}
+		.aimage{
+			width: 170px;
+			opacity: 0.9;
+			padding: 0 20px;
+		}
+		#contact h1 {line-height: 0.9em;}
+		
+		form{
+			font-size: 1.2em;
+		}
+		
+		input{
+			width: 400px;
+		}
+		textarea{
+			width: 400px;
+			height: 70px;
+		}
+		/*contact me! 제출 버튼 */
+		#submit { 
+			border: none;
+			outline: none;
+			background-color: #F87476;
+			padding: 5px 15px;
+			font-size: 1.5em;
+			font-weight: bold;
+			border-radius: 50%
+		}
+		#submit:hover {
+			background-color: orange;
+		}
+		/*가장 마지막 footer부분*/
+		footer {
+			position: absolute;
+			padding: 5px;
+			background-color: white;
+			
+		}
+		footer ul{
+			list-style: none;
+			background-color: white;
+			padding: 0;
+		}
+		footer li{
+			display: inline-block;
+			float: center;
+			padding: 0 20px;
+			font-size: 1.2em;
+		}
+		/*버튼에 마우스 올릴 시에 커서 변경*/
+		button:hover {cursor: grab;}
